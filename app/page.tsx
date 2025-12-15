@@ -246,6 +246,7 @@ export default function HomePage() {
                         alt={item.title}
                         className="w-full h-32 md:h-40 object-cover rounded-md mb-3 cursor-pointer"
                         onClick={() => setLightboxSrc(item.image_url as string)}
+                        onTouchEnd={() => setLightboxSrc(item.image_url as string)}
                       />
                     </div>
                   ) : null}

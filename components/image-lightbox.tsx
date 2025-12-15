@@ -23,6 +23,7 @@ export default function ImageLightbox({
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
       onClick={onClose}
+      onTouchEnd={onClose}
     >
       <div className="max-w-[95%] max-h-[95%] p-4" onClick={(e) => e.stopPropagation()}>
         <button

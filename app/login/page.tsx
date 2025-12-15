@@ -145,10 +145,7 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <p className="text-center text-sm text-gray-600 mt-4">
-            Demo credentials: username: <code className="bg-gray-100 px-1">admin</code>, password:{" "}
-            <code className="bg-gray-100 px-1">admin123</code>
-          </p>
+
 
           <div className="mt-4 text-center">
             <Link href="/" className="text-sm text-blue-600 hover:text-blue-500">
