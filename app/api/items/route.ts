@@ -11,6 +11,8 @@ export async function GET(request: NextRequest) {
     const category = searchParams.get("category")
     const search = searchParams.get("search")
 
+    console.log("Query params:", { type, status, category, search })
+
     let sql = "SELECT * FROM items WHERE 1=1"
     const params: any[] = []
 
@@ -36,7 +38,10 @@ export async function GET(request: NextRequest) {
 
     sql += " ORDER BY date_reported DESC"
 
+    console.log("SQL:", sql, "Params:", params)
+
     const items = await query<Item[]>(sql, params)
+    console.log("Items fetched:", items.length)
     return NextResponse.json(items)
   } catch (error) {
     console.error("Error fetching items:", error)
